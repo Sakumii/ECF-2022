@@ -1,0 +1,14 @@
+body {
+    width: 100%;
+    height: auto;
+}
+.api_content .show_id {
+    background-color: azure;
+    width: 50%;
+    height: 50%;
+}
+.api_content .buttons_content {
+    background-color: beige;
+    width: 50%;
+    height: 50%;
+}
