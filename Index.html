@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!--CSS-->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-        <link rel="stylsheet" href="src/css/main.css">
+        <link rel="stylesheet" href="src/css/main.css">
         <!--CSS-->
     </head>
     <body>
@@ -16,7 +16,7 @@
 
         <header>
             <div class="header_container">
-                <h1 class="title is-2">Nom de la franchise</h1>
+                <h1 class="title is-2 f_name">Nom de la franchise</h1>
             <nav class="header_menu">
                 <button class="button is-info is-light">login</button>
                 <button class="button is-info is-light">sign in</button>
@@ -25,11 +25,11 @@
         </header>
 
         <!--Main-->
-        <main>
+        <main class="columns section_container">
 
             <!--Stucture list section-->
 
-            <section class="section structure_list">
+            <section class="column structure_list">
                 <h2 class="subtitle is-5">nombre de structures de la franchise : </h2>
                 <h3 class="subtitle is-6">Liste des structures : </h3>
                 <ul class="content">
@@ -51,7 +51,7 @@
 
             <!--Selected Stucture info-->
 
-            <section class="section select_structure">
+            <section class="column select_structure">
                 <p>Nom de la structure séléctionée : </p>
                 <p>adresse de la structure séléctionée : </p>
                 <p>email de la structure séléctionée : </p>
@@ -59,20 +59,36 @@
 
             <!--Option control container-->
 
-            <section class="section Op_control_contain">
+            <section class="column  Op_control_contain">
                 <ol class="content">
-                    <li><button>option 1</button></li>
-                    <li><button>option 2</button></li>
-                    <li><button>option 3</button></li>
-                    <li><button>option 4</button></li>
-                    <li><button>option 5</button></li>
-                    <li><button>option 6</button></li>
-                    <li><button>option 7</button></li>
-                    <li><button>option 8</button></li>
-                    <li><button>option 9</button></li>
-                    <li><button>option 10</button></li>
+                    <li><input type="checkbox" id="toggle1" name="toggle" class="switch">
+                        <label for="toggle1" class="label"></label> Newsletter</li>
+
+                    <li><input type="checkbox" id="toggle2" name="toggle" class="switch">
+                        <label for="toggle2" class="label"></label> Gérer les planning des équipes</li>
+
+                    <li><input type="checkbox" id="toggle3" name="toggle" class="switch">
+                        <label for="toggle3" class="label"></label> Crée des événements</li>
+
+                    <li><input type="checkbox" id="toggle4" name="toggle" class="switch">
+                        <label for="toggle4" class="label"></label> Vendre des boissons et snacks</li>
+
+                    <li><input type="checkbox" id="toggle5" name="toggle" class="switch">
+                        <label for="toggle5" class="label"></label>1</li>
+                    <li><input type="checkbox" id="toggle6" name="toggle" class="switch">
+                        <label for="toggle6" class="label"></label>2</li>
+                    <li><input type="checkbox" id="toggle7" name="toggle" class="switch">
+                        <label for="toggle7" class="label"></label>3</li>
+                    <li><input type="checkbox" id="toggle8" name="toggle" class="switch">
+                        <label for="toggle8" class="label"></label>4</li>
+                    <li><input type="checkbox" id="toggle9" name="toggle" class="switch">
+                        <label for="toggle9" class="label"></label>5</li>
+                    <li><input type="checkbox" id="toggle10" name="toggle" class="switch">
+                        <label for="toggle10" class="label"></label>6</li>
                 </ol>
+            </div>
             </section>
         </main>
+        <script src="/node_modules/bulma-extensions/bulma-calendar/dist/bulma-calendar.min.js"></script>
     </body>
 </html>
