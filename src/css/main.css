@@ -25,7 +25,7 @@ body {
 }
 /*Log button*/
 
-.form_btn{
+.form_cont{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -40,13 +40,13 @@ body {
 .form_wrapper .card {
     width: 360px;
     padding: 20px;
-    background-color: #629ecf;
+    background-color: rgb(70 130 180 /55%);
 }
 .card_header {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    margin: 30px 20px 0;
+    margin: 30px 20px 30px;
     font-size: 1.1rem;
     color: azure;
     box-shadow: 2px 3px 8px #2980B9;
@@ -65,7 +65,56 @@ body {
     box-shadow: inset 1px 1px 2px rgb(189 195 199 / 55%), inset -1px 1px 2px rgb(189 195 199 /55%), 
     inset -1px -1px 2px rgb(189 195 199 /55%), inset 1px -1px 2px rgb(189 195 199 /55%);
     border-color: white;
+    transition: border-color 0.3s, box-shadow 0.3s;
 }
+
+*, ::after, ::before {
+    box-sizing: content-box;
+}
+
+.card_body {
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 40px 0;
+    text-align: center;
+}
+form {
+    flex: 0 0 100%;
+}
+.toggle_form {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+.form_control{
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid rgb(255 255 255 / 35%);
+    background: none;
+    outline: none;
+    padding: 10px 5px;
+    margin-bottom: 20px;
+    color: white;
+}
+.form_control::placeholder{
+    color: azure;
+}
+.form_button {
+    border: 1px solid transparent;
+    padding: 1rem 3rem;
+    background-color: rgb(238 244 249 / 85%);
+    border-radius: 50px;
+    margin-top: 1rem;
+    font-size: 1rem;
+    transition: transfrom 0.3s, box-shadow 0.3s;
+}
+
+.form_button:hover {
+    box-shadow: 3px 5px 15px rgb(70, 130, 180);
+    transform: translateY(-5px);
+}
+
 /*Main*/
 
 .section_container{
