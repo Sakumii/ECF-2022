@@ -40,5 +40,3 @@ const displayForm = _('displayForm');
             }
         });
                 
-
-S

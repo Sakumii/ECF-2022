@@ -23,7 +23,7 @@ body {
     float: right;
     padding: 15px;
 }
-/*Log button*/
+/*Login*/
 
 .form_cont{
     display: flex;
@@ -137,7 +137,7 @@ form {
     border-right: 0.5px solid white;
 }
 
-/*Ption control Section*/
+/*Option control Section*/
 
 .switch{
     display: none;
