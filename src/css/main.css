@@ -40,7 +40,7 @@ body {
 .form_wrapper .card {
     width: 360px;
     padding: 20px;
-    background-color: rgb(70 130 180 /55%);
+    background-color: rgb(70 130 180 );
     visibility: hidden;
     opacity: 0;
     transition: opacity 0.3s, visibility 0.3s;
@@ -125,7 +125,13 @@ form {
 /*Main*/
 
 .section_container{
+    position: absolute;
+    width: 100%;
+    top: 160px;
     padding: 15px;
+}
+.hide{
+    z-index: -1;
 }
 .column {
     border-right: 0.5px solid white;
