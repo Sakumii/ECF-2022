@@ -1,7 +1,7 @@
 <?php 
 
 define('HOST','localhost');
-define('DB_NAME','bd_ecf');
+define('DB_NAME','ecf');
 define('USER','root');
 define('PASS','');
 
