@@ -1,6 +1,6 @@
 <?php
 include_once '_src/php/config/database.php';
-$var = "Mondial fit";
+$var = "Mondial fit manager";
 ?>
 
 <!DOCTYPE html>
@@ -11,7 +11,7 @@ $var = "Mondial fit";
             require_once '_head/link.php';
             ?>
             
-        <title>ECF décembre 2022</title>
+        <title>Mondial fit manager</title>
     
     </head>
     <body>
