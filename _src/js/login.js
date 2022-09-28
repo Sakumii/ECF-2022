@@ -23,7 +23,7 @@ const displayForm = _('displayForm');
                 forLogin.classList.remove('active');
                 forRegister.classList.add('active');
                 if(formRegister.classList.contains('toggle_form')) {
-                    formContainer.style.transform = 'translate(-0%)';
+                    formContainer.style.transform = 'translate(-100%)';
                     formContainer.style.transition = 'transform .5s';
                     formRegister.classList.remove('toggle_form');
                     formLogin.classList.add('toggle_form');

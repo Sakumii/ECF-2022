@@ -1,8 +1,6 @@
 <?php
-
 include_once '_src/php/config/database.php';
 $var = "Mondial fit";
-
 ?>
 
 <!DOCTYPE html>
