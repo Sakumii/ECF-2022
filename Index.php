@@ -1,3 +1,10 @@
+<?php
+
+include_once('src/php/config/database.php');
+$var = "Mondial fit";
+
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -16,7 +23,7 @@
 
         <header>
             <div class="header_container">
-                <h1 class="title is-2 f_name" >Nom de la franchise ou structure</h1>
+                <h1 class="title is-2 f_name" ><?php echo $var ?></h1>
             <nav class="header_menu">
                 <button class="log_btn button is-info is-light" id="displayForm">login</button>
             </nav>
