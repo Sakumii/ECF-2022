@@ -1,5 +1,6 @@
 <?php
-        require 'inscription.php';
+        require_once 'inscription.php';
+        require_once 'connexion.php';
 ?>
 
 <header>
