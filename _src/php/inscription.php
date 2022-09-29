@@ -15,6 +15,9 @@
             if(empty($pseudo)){
                 $valid = false;
                 $err_pseudo = "! Champ requi";
+            }elseif(mb_strlen($pseudo) < 5){
+                $valid = false;
+                $err_pseudo = "Ce champ doit comporter plus de 5 caractéres";
             }else{
                 $req = $DB->prepare("SELECT *
                     FROM user

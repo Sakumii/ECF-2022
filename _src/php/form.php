@@ -24,7 +24,7 @@
                                     <form method="post" id="loginForm">
                                         <input type="text" name="pseudo" value="" class="form_control" placeholder="Pseudo">
                                         <input type="password" name="password" value="" class="form_control" placeholder="password">
-                                        <button type="submit" name="login" class="form_button"><a href="_src/php/connexion.php">Login</a></button>
+                                        <button type="submit" name="login" class="form_button">Login</button>
                                     </form>
 
                                     <form method="post" id="registerForm" class="toggle_form">
@@ -36,7 +36,7 @@
                                                 <input type="password" name="password" value="<?php if(isset($password)){echo $password;} ?>"  class="form_control" placeholder="password">
                                         <?php if(isset($err_password)){echo '<div>' . $err_password . '</div>';} ?>
                                                 <input type="password" name="confpass"  class="form_control" placeholder="confirm password">
-                                        <button type="submit" name="signin" class="form_button"><a href="_src/php/inscription.php">Sign in</a></button>
+                                        <button type="submit" name="signin" class="form_button">Sign in</button>
                                     </form>
                                 </div>  
                         </div>
