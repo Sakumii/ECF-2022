@@ -1,14 +1,5 @@
 <?php
-
-    if(!empty($_POST)){
-        extract($_POST);
-
-        if(isset($_POST['signin'])){
-            echo 'ok';
-        }else {
-            echo 'il y a un probléme';
-            }
-        }
+        require 'inscription.php';
 ?>
 
 <header>
@@ -30,17 +21,21 @@
                             </div>
                                 <div class="card_body>" id="formContainer">
 
-                                    <form method="POST" id="loginForm">
+                                    <form method="post" id="loginForm">
                                         <input type="text" name="pseudo" value="" class="form_control" placeholder="Pseudo">
                                         <input type="password" name="password" value="" class="form_control" placeholder="password">
                                         <button type="submit" name="login" class="form_button"><a href="_src/php/connexion.php">Login</a></button>
                                     </form>
 
-                                    <form method="POST" id="registerForm" class="toggle_form">
-                                        <input type="text" name="pseudo" value=""  class="form_control" placeholder="Pseudo">
-                                        <input type="mail" name="mail" value=""  class="form_control" placeholder="Email">
-                                        <input type="password" name="password" value=""  class="form_control" placeholder="password">
-                                        <input type="password" name="confpass" value=""  class="form_control" placeholder="confirm password">
+                                    <form method="post" id="registerForm" class="toggle_form">
+                                        <?php if(isset($err_pseudo)){echo '<div>' . $err_pseudo . '</div>';} ?>
+                                                <input type="text" name="pseudo" value="<?php if(isset($pseudo)){echo $pseudo;} ?>"  class="form_control" placeholder="Pseudo">
+                                        <?php if(isset($err_mail)){echo '<div>' . $err_mail . '</div>';} ?>
+                                                <input type="mail" name="mail" value="<?php if(isset($mail)){echo $mail;} ?>"  class="form_control" placeholder="Email">
+                                        <?php if(isset($err_password)){echo '<div>' . $err_password . '</div>';} ?>
+                                                <input type="password" name="password" value="<?php if(isset($password)){echo $password;} ?>"  class="form_control" placeholder="password">
+                                        <?php if(isset($err_password)){echo '<div>' . $err_password . '</div>';} ?>
+                                                <input type="password" name="confpass"  class="form_control" placeholder="confirm password">
                                         <button type="submit" name="signin" class="form_button"><a href="_src/php/inscription.php">Sign in</a></button>
                                     </form>
                                 </div>  
