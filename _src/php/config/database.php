@@ -1,10 +1,9 @@
 <?php
-  // Déclaration d'une nouvelle classe
   class connexionDB {
     private $host    = 'localhost';  // nom de l'host  
     private $name    = 'ecf';    // nom de la base de donnée
     private $user    = 'root';       // utilisateur 
-    private $pass    = '';       // mot de passe (il faudra peut-être mettre '' sous Windows)
+    private $pass    = '';       //laissez vide
     private $connexion;
     
     function __construct($host = null, $name = null, $user = null, $pass = null){

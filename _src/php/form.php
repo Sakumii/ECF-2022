@@ -8,7 +8,7 @@
         <h1 class="title is-2 f_name" ><?php echo $var ?></h1>
 
         <nav class="header_menu">
-            <button class="log_btn button is-info is-light" id="displayForm">login</button>
+            <button class="log_btn button is-info is-light" id="displayForm">Se connecter</button>
         </nav>         
             <section class="form_cont">
                 <div class="form_container">
@@ -16,16 +16,16 @@
                         <div class="card">
                             <div class="card_header">
 
-                                <div id="forLogin" class="form_header active">Login</div>
-                                <div id="forRegister" class="form_header">Sign in</div>
+                                <div id="forLogin" class="form_header active">Se connecter</div>
+                                <div id="forRegister" class="form_header">S'inscrire</div>
 
                             </div>
                                 <div class="card_body>" id="formContainer">
 
                                     <form method="post" id="loginForm">
                                         <input type="text" name="pseudo" value="" class="form_control" placeholder="Pseudo">
-                                        <input type="password" name="password" value="" class="form_control" placeholder="password">
-                                        <button type="submit" name="login" class="form_button">Login</button>
+                                        <input type="password" name="password" value="" class="form_control" placeholder="Mot de passe">
+                                        <button type="submit" name="login" class="form_button">Se connecter</button>
                                     </form>
 
                                     <form method="post" id="registerForm" class="toggle_form">
@@ -34,10 +34,10 @@
                                         <?php if(isset($err_mail)){echo '<div>' . $err_mail . '</div>';} ?>
                                                 <input type="mail" name="mail" value="<?php if(isset($mail)){echo $mail;} ?>"  class="form_control" placeholder="Email">
                                         <?php if(isset($err_password)){echo '<div>' . $err_password . '</div>';} ?>
-                                                <input type="password" name="password" value="<?php if(isset($password)){echo $password;} ?>"  class="form_control" placeholder="password">
+                                                <input type="password" name="password" value="<?php if(isset($password)){echo $password;} ?>"  class="form_control" placeholder="Mot de passe">
                                         <?php if(isset($err_password)){echo '<div>' . $err_password . '</div>';} ?>
-                                                <input type="password" name="confpass"  class="form_control" placeholder="confirm password">
-                                        <button type="submit" name="signin" class="form_button">Sign in</button>
+                                                <input type="password" name="confpass"  class="form_control" placeholder="confirmation du mot de passe">
+                                        <button type="submit" name="signin" class="form_button">S'inscrire</button>
                                     </form>
                                 </div>  
                         </div>
