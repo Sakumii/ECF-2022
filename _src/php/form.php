@@ -1,6 +1,7 @@
 <?php
-        require_once ('inscription.php');
         require_once ('connexion.php');
+        require_once ('inscription.php');
+        
 ?>
 
 <header>
@@ -23,7 +24,9 @@
                                 <div class="card_body>" id="formContainer">
 
                                     <form method="post" id="loginForm">
+                                        <?php if(isset($err_pseudo)){echo '<div>' . $err_pseudo . '</div>';} ?>
                                         <input type="text" name="pseudo" value="" class="form_control" placeholder="Pseudo">
+                                        <?php if(isset($err_password)){echo '<div>' . $err_password . '</div>';} ?>
                                         <input type="password" name="password" value="" class="form_control" placeholder="Mot de passe">
                                         <button type="submit" name="login" class="form_button">Se connecter</button>
                                     </form>

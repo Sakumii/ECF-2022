@@ -25,11 +25,11 @@ require_once('include.php');
                 $valid = false;
                 $err_pseudo = "! Champ requi";
             
-            }elseif(grapheme_strlen($pseudo) < 5){
+            }elseif(mb_strlen($pseudo) < 5){
                 $valid = false;
                 $err_pseudo = "Le pseudo doit comporter plus de 5 caractéres";
             
-            }elseif(grapheme_strlen($pseudo) > 25){
+            }elseif(mb_strlen($pseudo) > 25){
                 $valid = false;
                 $err_pseudo = "Le pseudo doit  comporter moins de 26 caractéres(". grapheme_strlen($pseudo) . "/25)";
             

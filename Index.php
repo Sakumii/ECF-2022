@@ -3,7 +3,7 @@
 include_once ('_src/php/config/database.php');
 
 if(isset($_SESSION['id'])){
-    $var = "Bonjour" . $_SESSION['pseudo'];
+    $var = "Bonjour " . $_SESSION['pseudo'];
 }else{
     $var = "Mondial fitness manager";
 }

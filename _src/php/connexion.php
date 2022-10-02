@@ -39,8 +39,8 @@ require_once('include.php');
                 $req = $req->fetch();
 
             if(isset($req['mdp'])){ 
-                    if(!password_verify($password, $req['mdp'])){
-            }else{
+                if(!password_verify($password, $req['mdp'])){
+                }else{
                     $valid = false;
                     $err_pseudo = "Le pseudo / le mot de passe est incorrecte";
                 }
@@ -57,7 +57,7 @@ require_once('include.php');
     
             if(isset($req_user['id'])){
 
-                $date_creation = date('Y-m-d H:i:s');
+                $date_connexion = date('Y-m-d H:i:s');
 
                 $req = $DB->prepare("UPDATE  user SET date_connexion = ? WHERE id = ?");
                 $req->execute(array($date_connexion, $req_user['id']));
