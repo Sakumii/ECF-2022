@@ -4,7 +4,7 @@
     <!--Stucture list section-->
 
         <section class="column structure_list">
-            <h2 class="subtitle is-5">nombre de structures de la franchise : </h2>
+            <h2 class="subtitle is-5">Nombre de structures de la franchise : </h2>
             <h3 class="subtitle is-6">Liste des structures actives : </h3>
                 <ul class="content">
                     <li><p>structure 1</p></li>
@@ -14,7 +14,7 @@
                     <li><p>structure 5</p></li>
                     <li><p>structure 6</p></li>               
                 </ul>
-            <h3 class="subtitle is-6">liste des structures non actives : </h3>
+            <h3 class="subtitle is-6">Liste des structures non actives : </h3>
                 <ul class="content">
                     <li><p>structure 1</p></li>
                     <li><p>structure 2</p></li>
@@ -40,9 +40,9 @@
                         <label for="toggle4" class="label"></label> Vendre des boissons et snacks</li>
 
                 <li><input type="checkbox" id="toggle5" name="toggle" class="switch">
-                        <label for="toggle5" class="label"></label>Promotion de la salle</li>
+                        <label for="toggle5" class="label"></label> Promotion de la salle</li>
                 <li><input type="checkbox" id="toggle6" name="toggle" class="switch">
-                        <label for="toggle6" class="label"></label>gestionnaire de planning de cour</li>
+                        <label for="toggle6" class="label"></label> Gestionnaire de planning de cour</li>
                 <li><input type="checkbox" id="toggle7" name="toggle" class="switch">
                         <label for="toggle7" class="label"></label>1</li>
                 <li><input type="checkbox" id="toggle8" name="toggle" class="switch">

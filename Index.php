@@ -1,6 +1,12 @@
 <?php
-include_once '_src/php/config/database.php';
-$var = "Mondial fit manager";
+
+include_once ('_src/php/config/database.php');
+
+if(isset($_SESSION['id'])){
+    $var = "Bonjour" . $_SESSION['pseudo'];
+}else{
+    $var = "Mondial fitness manager";
+}
 ?>
 
 <!DOCTYPE html>
@@ -11,7 +17,7 @@ $var = "Mondial fit manager";
             require_once '_head/link.php';
             ?>
             
-        <title>Mondial fit manager</title>
+        <title>Mondial fitness manager</title>
     
     </head>
     <body>
