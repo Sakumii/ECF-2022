@@ -1,6 +1,6 @@
 <?php 
 
-require_once('config/include.php');
+require_once('include.php');
 
 if(isset($_SESSION['id'])){
     header('location: index.php');
