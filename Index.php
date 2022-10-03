@@ -1,6 +1,6 @@
 <?php
 
-require_once ('include.php');
+require_once ('_config/include.php');
 
 if(isset($_SESSION['id'])){
     $var = "Bonjour " . $_SESSION['pseudo'];
@@ -24,11 +24,11 @@ if(isset($_SESSION['id'])){
 
     <!--Form-->
 
-    <?php require_once ('form.php') ?>
+    <?php require_once ('_content/form.php') ?>
 
     <!--Main-->
         
-    <?php require_once ('section.php') ?>
+    <?php require_once ('_content/section.php') ?>
         
     <!--Script-->
             
