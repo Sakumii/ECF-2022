@@ -24,11 +24,11 @@ if(isset($_SESSION['id'])){
 
     <!--Form-->
 
-    <?php require_once ('_content/form.php') ?>
+    <?php require_once ('form.php') ?>
 
     <!--Main-->
         
-    <?php require_once ('_content/section.php') ?>
+    <?php require_once ('section.php') ?>
         
     <!--Script-->
             
