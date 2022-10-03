@@ -1,6 +1,6 @@
 <?php
 
-require_once ('_src/php/include.php');
+require_once ('include.php');
 
 if(isset($_SESSION['id'])){
     $var = "Bonjour " . $_SESSION['pseudo'];
