@@ -2,10 +2,6 @@
 
 require_once('include.php');
 
-if(isset($_SESSION['id'])){
-    header('location: index.php');
-    exit;
-}
 
 if(!empty($_POST)){
     extract($_POST);
