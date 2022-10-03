@@ -1,4 +1,12 @@
-<main class="columns section_container " id="mainContainer">
+
+ <?php
+        if(!isset($_SESSION['id'])){
+
+        ?>
+        <?php
+        }else{
+        ?>
+                <main class="columns section_container " id="mainContainer">
 
 <!--Stucture list section-->
 
@@ -27,7 +35,7 @@
     <section class="column  Op_control_contain">
         <ol class="content">
             <li><input type="checkbox" id="toggle1" name="toggle" class="switch">
-                    <label for="toggle1" class="label"></label> Newsletter</li>
+                    <label for="toggle1" class="label"></label> NewsLetter</li>
 
             <li><input type="checkbox" id="toggle2" name="toggle" class="switch">
                     <label for="toggle2" class="label"></label> Gérer le planning des équipes</li>
@@ -43,14 +51,12 @@
             <li><input type="checkbox" id="toggle6" name="toggle" class="switch">
                     <label for="toggle6" class="label"></label> Gestionnaire de planning de cour</li>
             <li><input type="checkbox" id="toggle7" name="toggle" class="switch">
-                    <label for="toggle7" class="label"></label>1</li>
-            <li><input type="checkbox" id="toggle8" name="toggle" class="switch">
-                    <label for="toggle8" class="label"></label>2</li>
-            <li><input type="checkbox" id="toggle9" name="toggle" class="switch">
-                    <label for="toggle9" class="label"></label>3</li>
-            <li><input type="checkbox" id="toggle10" name="toggle" class="switch">
-                    <label for="toggle10" class="label"></label>4</li>
         </ol>
         </div>
     </section>
     </main>
+
+    <?php
+        }
+    ?>
+
