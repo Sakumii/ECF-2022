@@ -1,6 +1,6 @@
 <?php
 
-include_once ('_src/php/config/database.php');
+require_once ('_src/php/config/include.php');
 
 if(isset($_SESSION['id'])){
     $var = "Bonjour " . $_SESSION['pseudo'];

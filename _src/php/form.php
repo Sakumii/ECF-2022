@@ -42,6 +42,7 @@
                                                 <input type="password" name="confpass"  class="form_control" placeholder="confirmation du mot de passe">
                                         <button type="submit" name="signin" class="form_button">S'inscrire</button>
                                     </form>
+                                    
                                 </div>  
                         </div>
                     </div>

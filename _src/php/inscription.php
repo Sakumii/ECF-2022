@@ -1,6 +1,6 @@
 <?php 
 
-require_once('include.php');
+require_once('config/include.php');
 
     if(isset($_SESSION['id'])){
         header('Location: index.php');
@@ -9,17 +9,14 @@ require_once('include.php');
 
     if(!empty($_POST)){
         extract($_POST);
-    
-
-        $valid = (boolean) true;
+        $valid = true;
 
         if(isset($_POST['signin'])){
-            $pseudo = trim($pseudo);
-            $mail = trim($mail);
+            $pseudo = htmlentities(trim($pseudo));
+            $mail = htmlentities(strtolower(trim($mail)));
             $password = trim($password);
             $confpass = trim($confpass);
 
-            //Pseuso
 
             if(empty($pseudo)){
                 $valid = false;
@@ -31,7 +28,7 @@ require_once('include.php');
             
             }elseif(mb_strlen($pseudo) > 25){
                 $valid = false;
-                $err_pseudo = "Le pseudo doit  comporter moins de 26 caractéres(". grapheme_strlen($pseudo) . "/25)";
+                $err_pseudo = "Le pseudo doit  comporter moins de 26 caractéres(". mb_strlen($pseudo) . "/25)";
             
             }else{
                 $req = $DB->prepare("SELECT *
@@ -53,7 +50,7 @@ require_once('include.php');
                 $err_mail = "! Champ requi";
             
             }elseif(!filter_var($mail, FILTER_VALIDATE_EMAIL)) {
-                $err_mail = "Le format de l'email est invalide";
+                $err_mail = "Le format de l'email n'est pas invalide";
               
             }else{
                 $req = $DB->prepare("SELECT *
@@ -65,7 +62,8 @@ require_once('include.php');
                 if(isset($req['id'])){
                     $valid = false;
                     $err_mail = "ce mail est déja pris";
-                }
+            }
+        }
 
             //Password
             
@@ -97,9 +95,6 @@ require_once('include.php');
 
                 header('location: index.php');
                 exit;
-            }else{
-                echo 'NON OK';
             }
         }
     }
-}
