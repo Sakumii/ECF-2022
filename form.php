@@ -1,14 +1,16 @@
 <?php
         require_once ('connexion.php');
         require_once ('inscription.php');
-        
 ?>
 
 <header>
     <div class="header_container">
         <h1 class="title is-2 f_name" ><?php echo $var ?></h1>
-
+    <?php
+        if(!isset($_SESSION['id'])){
+    ?>
         <nav class="header_menu">
+            
             <button class="log_btn button is-info is-light" id="displayForm">Se connecter</button>
         </nav>         
             <section class="form_cont">
@@ -47,6 +49,16 @@
                         </div>
                     </div>
                 </div>
-            </section>            
+            </section>
+            <?php
+                }else{
+            ?>
+            <nav class="header_menu">
+            
+                <button class="log_btn button is-info is-light"><a href="deconnexion.php">Déconnexion</a></button>
+            </nav>
+            <?php
+            }
+            ?>            
         </div>
     </header>
