@@ -1,6 +1,8 @@
 <?php
         require_once ('connexion.php');
         require_once ('inscription.php');
+        require_once ('add_partner.php');
+        require_once ('add_structure.php');
 ?>
 
 <header>
