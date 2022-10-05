@@ -38,8 +38,9 @@ body {
     z-index: -1;
 }
 .column {
-    border-right: 0.5px solid white;
+    border-right: 0.5px solid gray;
 }
+
 
 /*Option control Section*/
 
