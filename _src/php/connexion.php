@@ -1,6 +1,6 @@
 <?php 
 
-require_once('_config/include.php');
+require_once('../ECF-2022/_config/include.php');
 
 
 if(!empty($_POST)){
