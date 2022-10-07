@@ -14,14 +14,20 @@
         <section class="column is-one-quarter structure_list">
             
             <h3 class="subtitle is-6">Liste des structures actives : </h3>
-                <ul class="content">
-                    <li><p>structure 1</p></li>
-                    <li><p>structure 2</p></li>
-                    <li><p>structure 3</p></li>
-                    <li><p>structure 4</p></li>
-                    <li><p>structure 5</p></li>
-                    <li><p>structure 6</p></li>               
-                </ul>
+            <?php require_once('member.php');
+
+            foreach($req_member as $rm){ ?>
+
+            <ul class="columns">
+                <li class="column"><?php 
+                echo $rm['pseudo']; ?>
+                <br>
+                <?php
+                echo $rm['mail']; ?></li>
+        </ul> 
+        <?php
+        } ?>
+           
             </section>
 
             <section class="column is-one-quarter structure_list">
