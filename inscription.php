@@ -1,13 +1,13 @@
 <?php 
 
-require_once('../ECF-2022/_config/include.php');
+require_once('_config/include.php');
 
 
     if(!empty($_POST)){
         extract($_POST);
         $valid = true;
 
-        if(isset($_POST['add_partner'])){
+        if(isset($_POST['signin'])){
             $pseudo = htmlentities(trim($pseudo));
             $mail = htmlentities(strtolower(trim($mail)));
             $password = trim($password);
@@ -86,7 +86,7 @@ require_once('../ECF-2022/_config/include.php');
                 }
                 $date_creation = date('Y-m-d H:i:s');
 
-                $req = $DB->prepare("INSERT INTO user(pseudo, mail, mdp, date_creation, date_connexion, role) VALUES (?, ?, ?, ?, ?, 1)");
+                $req = $DB->prepare("INSERT INTO user(pseudo, mail, mdp, date_creation, date_connexion) VALUES (?, ?, ?, ?, ?)");
                 $req->execute(array($pseudo, $mail, $crypt_password, $date_creation, $date_creation));
 
                 header('location: index.php');
