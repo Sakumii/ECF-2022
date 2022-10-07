@@ -1,5 +1,5 @@
 <?php 
-    require_once('../_config/include.php');
+    require_once('./_config/include.php');
 
     if(!in_array($_SESSION['role'],[1, 2])){
         header('location: index.php');
