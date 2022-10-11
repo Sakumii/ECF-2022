@@ -1,5 +1,4 @@
 <?php
-
 require_once ('_config/include.php');
 
 if(isset($_SESSION['id'])){
