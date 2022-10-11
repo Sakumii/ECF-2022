@@ -37,12 +37,11 @@ body {
 .hide{
     z-index: -1;
 }
+
 .Op_control_contain{
     border-left: 0.5px solid lightslategray;
 }
-.structure_list.hide{
-    z-index: -1;
-}
+
 
 
 /*Option control Section*/
