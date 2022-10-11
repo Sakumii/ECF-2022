@@ -11,7 +11,7 @@
 <!--Stucture list section-->
 
 <main class="columns section_container " id="mainContainer">
-        <section class="column is-one-quarter structure_list">
+        <section class="column is-three-quarter structure_list">
             
             <h3 class="subtitle is-6">Liste des structures actives : </h3>
             <?php require_once('member.php');
@@ -30,7 +30,7 @@
            
             </section>
 
-            <section class="column is-one-quarter structure_list">
+            <!-- <section class="column is-one-quarter structure_list">
                 <h3 class="subtitle is-6">Liste des structures non actives : </h3>
                     <ul class="content">
                         <li><p>structure 1</p></li>
@@ -38,11 +38,11 @@
                         <li><p>structure 3</p></li>
                         <li><p>structure 4</p></li>
                     </ul>
-            </section>
+            </section> -->
     
 <!--Option control container-->
 
-    <section class="column  Op_control_contain">
+    <section class="column is-one-quarter  Op_control_contain" id="right_controler">
         <ol class="content">
             <li><input type="checkbox" id="toggle1" name="toggle" class="switch">
                     <label for="toggle1" class="label"></label> NewsLetter</li>

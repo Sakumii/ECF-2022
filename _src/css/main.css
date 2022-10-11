@@ -32,13 +32,16 @@ body {
     position: absolute;
     width: 100%;
     top: 160px;
-    padding: 15px;
+    padding: 30px;
 }
 .hide{
     z-index: -1;
 }
-.column {
+.structure_list{
     border-right: 0.5px solid lightslategray;
+}
+.structure_list.hide{
+    z-index: -1;
 }
 
 
