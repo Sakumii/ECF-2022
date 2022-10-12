@@ -9,4 +9,16 @@ function _(e) {
 
 partnerButton.addEventListener('click', () => {
     listStructure.classList.remove('hide');
+    listStructure.style.transition = 'transform .5s';
+})
+
+//listStructure.addEventListener('checke', () => {
+    //right.classList.remove('hide');
+//})
+
+listStructure.addEventListener('change', (i) => {
+    if(i.target.checked) {
+        right.classList.remove('hide');
+        right.style.transition = 'transform .5s';
+      }
 })

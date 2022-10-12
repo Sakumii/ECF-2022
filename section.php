@@ -13,7 +13,7 @@
 <main class="columns section_container " id="mainContainer">
         <section class="column is-one-quarter structure_list">
             
-            <h3 class="subtitle is-6">Liste des partenaires actives : </h3>
+            <h3 class="subtitle is-6">Liste des partenaires actif : </h3>
             <?php require_once('member.php');
 
             foreach($req_member as $rm){ ?>
