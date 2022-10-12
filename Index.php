@@ -31,7 +31,8 @@ if(isset($_SESSION['id'])){
         
     <!--Script-->
             
-        <script type="text/javascript" src="./_src/js/login.js"></script>
+        <script type="text/javascript" src="_src/js/login.js"></script>
+        <script type="text/javascript" src="_src/js/right.js"></script>
 
     </body>
 </html>

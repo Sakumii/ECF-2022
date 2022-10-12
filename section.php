@@ -13,14 +13,14 @@
 <main class="columns section_container " id="mainContainer">
         <section class="column is-one-quarter structure_list">
             
-            <h3 class="subtitle is-6">Liste des structures actives : </h3>
+            <h3 class="subtitle is-6">Liste des partenaires actives : </h3>
             <?php require_once('member.php');
 
             foreach($req_member as $rm){ ?>
 
             <ul class="columns">
                 <li class="column">
-                <button class="button is-link is-light partner_button">
+                <button class="button is-link is-light" id="partner_button">
             <?php 
                 echo $rm['pseudo']; ?>
                 </button>
@@ -33,7 +33,7 @@
            
             </section>
 
-            <section class="hide column is-two-quarter list_structure">
+            <section class="hide column is-two-quarter" id="list_structure">
                 <h3 class="subtitle is-6">Liste des structures de $user :</h3>
                     <select class="select is-link">
                         <option>Selectionner une structure</option>
@@ -43,7 +43,7 @@
     
 <!--Option control container-->
 
-    <section class="hide column is-one-quarter  Op_control_contain right_controler">
+    <section class="hide column is-one-quarter  Op_control_contain" id="right_controler">
         <ol class="content">
             <li><input type="checkbox" id="toggle1" name="toggle" class="switch">
                     <label for="toggle1" class="label"></label> NewsLetter</li>
