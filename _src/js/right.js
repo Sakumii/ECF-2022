@@ -15,10 +15,3 @@ partnerButton.addEventListener('click', () => {
 listStructure.addEventListener('click', () => {
     right.classList.remove('hide');
 })
-
-//listStructure.addEventListener('change', (i) => {
-    //if(i.target.checked) {
-        //right.classList.remove('hide');
-        //right.style.transition = 'transform .5s';
-      //}
-//})

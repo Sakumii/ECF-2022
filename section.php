@@ -20,20 +20,21 @@
 
             <ul class="columns">
                 <li class="column">
-                <button class="button is-link is-light partner_button">
+                <button class="button is-link is-light" id="partner_button">
             <?php 
                 echo $rm['pseudo']; ?>
                 </button>
                 <br>
             <?php
                 echo $rm['mail']; ?></li>
-            <section class="hide list_structure">
-                <h3 class="subtitle is-6">Liste des structures de <?php $rm['id'] ?> :</h3>
+                <li>
+            <section class="hide" id="list_structure">
+                <h3 class="subtitle is-6">Liste des structures de $user :</h3>
                     <select class="select is-link">
                         <option>Selectionner une structure</option>
                         <option>Salle Evry</option>
                     </select>
-            </section>
+            </section></li>
     
         </ul> 
         <?php
@@ -43,7 +44,7 @@
 
 <!--Option control container-->
 
-    <section class="hide column is-one-quarter  Op_control_contain right_controler">
+    <section class="hide column is-one-quarter  Op_control_contain" id="right_controler">
         <ol class="content">
             <li><input type="checkbox" id="toggle1" name="toggle" class="switch">
                     <label for="toggle1" class="label"></label> NewsLetter</li>
