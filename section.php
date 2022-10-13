@@ -26,11 +26,15 @@
                 </button>
                 <br>
             <?php
-                echo $rm['mail']; ?></li>
+                echo $rm['mail']; ?>
+                <div>
+                    <a href="profil.php?id=<?= $rm['id']?>">Voir profil</a>
+                </div>
+            </li>
         </ul> 
-        <?php
-        } ?>
-           </section>
+       <?php
+        } ?> 
+        </section>
 
 <!--Liste des strucutres du partenaire-->
 
@@ -38,7 +42,9 @@
                 <h3 class="subtitle is-6">Liste des structures de <?php $rm['id'] ?> :</h3>
                     <select class="select is-link">
                         <option>Selectionner une structure</option>
-                        <option>Salle Evry</option>
+                        <?php foreach($req_structure as $rs){ ?>
+                        <option><?php echo $rs['pseudo'] ?></option>
+                        <?php } ?>
                     </select>
             </section>
 
