@@ -4,7 +4,7 @@ const right = _('right_controler');
 const listStructure = _('list_structure');
 
 function _(e) {
-    return document.getElementById(e);
+    return document.getElementsByClassName();
 };
 
 partnerButton.addEventListener('click', () => {
@@ -12,13 +12,13 @@ partnerButton.addEventListener('click', () => {
     listStructure.style.transition = 'transform .5s';
 })
 
-//listStructure.addEventListener('checke', () => {
-    //right.classList.remove('hide');
-//})
-
-listStructure.addEventListener('change', (i) => {
-    if(i.target.checked) {
-        right.classList.remove('hide');
-        right.style.transition = 'transform .5s';
-      }
+listStructure.addEventListener('click', () => {
+    right.classList.remove('hide');
 })
+
+//listStructure.addEventListener('change', (i) => {
+    //if(i.target.checked) {
+        //right.classList.remove('hide');
+        //right.style.transition = 'transform .5s';
+      //}
+//})
