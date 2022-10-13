@@ -4,7 +4,7 @@ const right = _('right_controler');
 const listStructure = _('list_structure');
 
 function _(e) {
-    return document.getElementsById();
+    return document.getElementById(e);
 };
 
 partnerButton.addEventListener('click', () => {
