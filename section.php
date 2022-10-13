@@ -11,8 +11,8 @@
 <!--Stucture list section-->
 
 <main class="columns section_container " id="mainContainer">
+        
         <section class="column is-one-quarter structure_list">
-            
             <h3 class="subtitle is-6">Liste des partenaires actif : </h3>
             <?php require_once('member.php');
 
@@ -27,19 +27,19 @@
                 <br>
             <?php
                 echo $rm['mail']; ?></li>
-                <li>
-            <section class="hide" id="list_structure">
-                <h3 class="subtitle is-6">Liste des structures de $user :</h3>
+        </ul> 
+        <?php
+        } ?>
+           </section>
+
+<!--Liste des strucutres du partenaire-->
+
+           <section class="hide column is-two-quarter" id="list_structure">
+                <h3 class="subtitle is-6">Liste des structures de <?php $rm['id'] ?> :</h3>
                     <select class="select is-link">
                         <option>Selectionner une structure</option>
                         <option>Salle Evry</option>
                     </select>
-            </section></li>
-    
-        </ul> 
-        <?php
-        } ?>
-           
             </section>
 
 <!--Option control container-->
