@@ -56,8 +56,11 @@
                 }else{
             ?>
             <nav class="header_menu">
-                <button class="log_btn button is-info is-light" id="displayForm">Ajouter partenaire/ structure</button>
                 <button class="log_btn button is-info is-light" type="submit"><a href="deconnexion.php">Déconnexion</a></button>
+                <?php if(in_array($_SESSION['niveau'], [2])){ ?>
+                <button class="log_btn button is-info is-light" id="displayForm">Ajouter partenaire/ structure</button>
+                <?php }?>
+                
             </nav>
        
             <section class="form_cont">
