@@ -88,7 +88,7 @@ require_once('./_config/include.php');
                 }
                 $date_creation = date('Y-m-d H:i:s');
 
-                $req = $DB->prepare("INSERT INTO user(pseudo, mail, mdp, date_creation, date_connexion, 'role') VALUES (?, ?, ?, ?, ?, 1)");
+                $req = $DB->prepare("INSERT INTO user(pseudo, mail, mdp, date_creation, date_connexion, role) VALUES (?, ?, ?, ?, ?, 1)");
                 $req->execute(array($pseudo, $mail, $crypt_password, $date_creation, $date_creation));
 
                 header('location: index.php');
