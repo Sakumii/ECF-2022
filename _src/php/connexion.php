@@ -58,7 +58,7 @@ if(!empty($_POST)){
             $_SESSION['id'] = $req_user['id'];
             $_SESSION['mail'] = $req_user['mail'];
             $_SESSION['pseudo'] = $req_user['pseudo'];
-            $_SESSION['niveau'] = $req_user['niveau'];
+            $_SESSION['role'] = $req_user['role'];
 
             header('location: index.php');
             exit;

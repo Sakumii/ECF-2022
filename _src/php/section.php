@@ -27,9 +27,6 @@
                 <br>
             <?php
                 echo $rm['mail']; ?>
-                <div>
-                    <a href="profil.php?id=<?= $rm['id']?>">Voir profil</a>
-                </div>
             </li>
         </ul> 
        <?php

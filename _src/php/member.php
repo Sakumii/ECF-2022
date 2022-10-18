@@ -6,7 +6,7 @@ require_once('./_config/include.php');
 
 $req_sql = "SELECT *
     FROM user
-    WHERE niveau = 1";
+    WHERE role = 1";
 
 //if(isset($_SESSION['id'])){
     //$req_sql .= "WHERE id <> ?";
@@ -16,8 +16,8 @@ $req_sql = "SELECT *
 $req = $DB->prepare($req_sql);
 
 
-if(isset($_SESSION['niveau'])){
-    $req->execute([$_SESSION['niveau']]);
+if(isset($_SESSION['role'])){
+    $req->execute([$_SESSION['role']]);
 }else{
     $req->execute();
 }
@@ -28,7 +28,7 @@ $req_member = $req->fetchALL();
 
 $req_sql = "SELECT *
     FROM user
-    WHERE niveau = 0";
+    WHERE role = 0";
 
 //if(isset($_SESSION['id'])){
     //$req_sql .= "WHERE id <> ?";
@@ -38,8 +38,8 @@ $req_sql = "SELECT *
 $req = $DB->prepare($req_sql);
 
 
-if(isset($_SESSION['niveau'])){
-    $req->execute([$_SESSION['niveau']]);
+if(isset($_SESSION['role'])){
+    $req->execute([$_SESSION['role']]);
 }else{
     $req->execute();
 }
