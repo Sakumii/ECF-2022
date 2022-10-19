@@ -2,49 +2,31 @@
 
 require_once('./_config/include.php');
 
-//Requete Partenaire
+$req_sql = "SELECT * 
+FROM user ";
 
-$req_sql = "SELECT *
-    FROM user
-    WHERE role =1 ";
-
-//if(isset($_SESSION['id'])){
-    //$req_sql .= "WHERE id <> ?";
-//}
-
+if(isset($_SESSION['id'])){
+    $req_sql .= "WHERE id <> ?";
+}
 
 $req = $DB->prepare($req_sql);
 
-
-if(isset($_SESSION['role'])){
-    $req->execute([$_SESSION['role']]);
+if(isset($_SESSION['id'])){
+    $req->execute([$_SESSION ['id']]);
 }else{
-    $req->execute();
+    
 }
 
-$req_member = $req->fetchALL();
+$req_member = $req->fetchall();
+
+
+//Requete Partenaire
+
+
 
 //Requete structure
 
-$req_sql = "SELECT *
-    FROM user
-    WHERE role =0 ";
 
-//if(isset($_SESSION['id'])){
-    //$req_sql .= "WHERE id <> ?";
-//}
-
-
-$req = $DB->prepare($req_sql);
-
-
-if(isset($_SESSION['role'])){
-    $req->execute([$_SESSION['role']]);
-}else{
-    $req->execute();
-}
-
-$req_structure = $req->fetchALL();
 
 ?>
 

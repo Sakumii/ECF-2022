@@ -15,8 +15,8 @@
         <section class="column is-one-quarter structure_list">
             <h3 class="subtitle is-6">Liste des partenaires actif : </h3>
             <?php require_once('member.php');
-
-            foreach($req_member as $rm){ ?>
+            if(in_array($_SESSION['roles'], [1])){
+                foreach($req_member as $rm){ ?>
 
             <ul class="columns">
                 <li class="column">
@@ -31,6 +31,7 @@
         </ul> 
        <?php
         }
+    }
         if(!isset($rm)){ ?>
             <h4 style="color :red">
         <?php
@@ -46,9 +47,12 @@
                 <h3 class="subtitle is-6">Liste des structures de <?php $rm['id'] ?> :</h3>
                     <select class="select is-link">
                         <option>Selectionner une structure</option>
-                        <?php foreach($req_structure as $rs){ ?>
+                        <?php
+                        if(in_array($_SESSION['roles'], [0])){ 
+                        foreach($req_structure as $rs){ ?>
                         <option><?php echo $rs['pseudo'] ?></option>
-                        <?php } ?>
+                        <?php }
+                        }?>
                     </select>
             </section>
 
