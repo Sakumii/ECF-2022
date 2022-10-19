@@ -35,5 +35,21 @@ if(isset($_SESSION['roles'])){
 
 $req_structure = $req->fetchall();
 
-?>
+//Requete admin
 
+$req_sql = "SELECT * 
+FROM user
+WHERE roles = 2 ";
+
+$req = $DB->prepare($req_sql);
+
+if(isset($_SESSION['roles'])){
+    $req->execute([$_SESSION ['roles']]);
+}else{
+    $req->execute();
+}
+
+$req_admin = $req->fetchall();
+
+
+?>
