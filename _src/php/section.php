@@ -30,11 +30,11 @@
         </ul> 
        <?php
         }
-        if(!isset($rm)){ ?>
-            <h4 style="color :red">
+        //if(!isset($rm)){ ?>
+            <!--<h4 style="color :red"> -->
         <?php
-            echo "il n\'y a pas de partenaire pour le moment";
-        }
+           // echo "il n\'y a pas de partenaire pour le moment";
+        //} 
         ?> 
             </h4>
         </section>
